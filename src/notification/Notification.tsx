@@ -64,7 +64,7 @@ const Notification: FC<NotificationType> = (props) => {
 
 Notification.defaultProps = {
     type: 'info',
-    icon: CircleExclamation,
+    icon: <CircleExclamation/>,
     timeout: 10,
     onClick: () => ({})
 };
