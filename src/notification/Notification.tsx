@@ -56,7 +56,7 @@ const Notification: FC<NotificationType> = (props) => {
                 style={{cursor: props.onClick != null ? 'pointer' : 'default'}}
                 className={`notification notification__${props.type} ${exit ? 'notification__hide' : ''}`}>
                 <span className={'notification__icon'}>
-                  {props.icon}
+                  <CircleExclamation/>
                 </span>
         <p className={'notification__msg'}>{props.message}</p>
     </div>;
@@ -64,7 +64,6 @@ const Notification: FC<NotificationType> = (props) => {
 
 Notification.defaultProps = {
     type: 'info',
-    icon: () => <CircleExclamation/>,
     timeout: 10,
     onClick: () => ({})
 };
