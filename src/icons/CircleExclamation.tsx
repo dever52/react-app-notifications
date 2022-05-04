@@ -19,7 +19,7 @@ const CircleExclamation = (props: any) => {
             <circle
                 cx={454.67}
                 cy={715.64}
-                r={68.24}
+                r={58.24}
                 style={{
                     fill: "#fff",
                     stroke: "#1d1d1b",
@@ -27,12 +27,12 @@ const CircleExclamation = (props: any) => {
                 }}
             />
             <rect
-                x={386.43}
-                y={125.46}
-                width={136.47}
-                height={459.72}
-                rx={68.24}
-                ry={68.24}
+                x={396.42}
+                y={135.45}
+                width={116.49}
+                height={443.1}
+                rx={50.38}
+                ry={50.38}
                 style={{
                     fill: "#fff",
                     stroke: "#1d1d1b",
