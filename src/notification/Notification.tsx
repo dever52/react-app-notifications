@@ -66,7 +66,7 @@ const Notification: FC<NotificationType> = (props) => {
                 style={{cursor: props.onClick != null ? 'pointer' : 'default', backgroundColor: color}}
                 className={`notification notification__${props.type} ${exit ? 'notification__hide' : ''}`}>
                 <span className={'notification__icon'}>
-                  <CircleExclamation style={{fill: color}}/>
+                  <CircleExclamation style={{fill: "white"}}/>
                 </span>
         <p className={'notification__msg'}>{props.message}</p>
     </div>;
