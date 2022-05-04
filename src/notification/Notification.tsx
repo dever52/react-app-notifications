@@ -50,11 +50,17 @@ const Notification: FC<NotificationType> = (props) => {
         startTimer();
     }, []);
 
+    let notificationType;
+    if (props.type == "success") notificationType = "notification-success";
+    if (props.type == "info") notificationType = "notification-info";
+    if (props.type == "error") notificationType = "notification-error";
+    if (props.type == "warning") notificationType = "notification-warning";
+
     return <div onMouseEnter={pauseTimer}
                 onMouseLeave={startTimer}
                 onClick={props.onClick}
                 style={{cursor: props.onClick != null ? 'pointer' : 'default'}}
-                className={`notification notification__${props.type} ${exit ? 'notification__hide' : ''}`}>
+                className={`notification ${notificationType} notification__${props.type} ${exit ? 'notification__hide' : ''}`}>
                 <span className={'notification__icon'}>
                   <CircleExclamation/>
                 </span>

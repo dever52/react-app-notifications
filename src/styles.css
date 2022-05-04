@@ -43,9 +43,9 @@ html, body {
   min-height: 80px;
   padding: 0;
   margin: 0 0 10px;
-  background-color: #e8e8e8;
+  background-color: #2f70fd;
   border-radius: 4px;
-  color: var(--mainRed);
+  color: white;
   display: flex;
   align-items: center;
   animation: show_slide 1s ease forwards;
@@ -65,6 +65,7 @@ html, body {
 .notification__icon svg {
   height: 22px;
   width: 22px;
+  fill: white;
 }
 .notification__msg {
   display: inline-block;
@@ -73,6 +74,18 @@ html, body {
   line-height: 18px;
   font-size: 18px;
   white-space: pre-wrap;
+}
+.notification-info {
+  background-color: #2f70fd;
+}
+.notification-warning {
+  background-color: #e7d700;
+}
+.notification-error {
+  background-color: #cb0000;
+}
+.notification-success {
+  background-color: #00a40a;
 }
 
 @media screen and (max-width: 450px) {

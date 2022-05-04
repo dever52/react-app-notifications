@@ -44,9 +44,9 @@ html, body {
   min-height: 80px;
   padding: 0;
   margin: 0 0 10px;
-  background-color: #e8e8e8;
+  background-color: #2f70fd;
   border-radius: 4px;
-  color: var(--mainRed);
+  color: white;
 
   display: flex;
   align-items: center;
@@ -68,6 +68,7 @@ html, body {
     svg {
       height: 22px;
       width: 22px;
+      fill: white;
     }
   }
 
@@ -78,6 +79,22 @@ html, body {
     line-height: 18px;
     font-size: 18px;
     white-space: pre-wrap;
+  }
+
+  &-info {
+    background-color: #2f70fd;
+  }
+
+  &-warning {
+    background-color: #e7d700;
+  }
+
+  &-error {
+    background-color: #cb0000;
+  }
+
+  &-success {
+    background-color: #00a40a;
   }
 }
 
