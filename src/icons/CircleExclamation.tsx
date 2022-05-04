@@ -15,32 +15,30 @@ const CircleExclamation = (props: any) => {
                     stroke: "#1d1d1b",
                     strokeMiterlimit: 10,
                 }}
-                data-name="Ebene 2"
             />
-            <g data-name="Ebene 3">
-                <circle
-                    cx={454.67}
-                    cy={741.33}
-                    r={85.94}
-                    style={{
-                        fill: "#fff",
-                        stroke: "#1d1d1b",
-                        strokeMiterlimit: 10,
-                    }}
-                />
-                <rect
-                    x={368.72}
-                    y={82.06}
-                    width={171.89}
-                    height={512}
-                    rx={85.94}
-                    style={{
-                        fill: "#fff",
-                        stroke: "#1d1d1b",
-                        strokeMiterlimit: 10,
-                    }}
-                />
-            </g>
+            <circle
+                cx={454.67}
+                cy={715.64}
+                r={68.24}
+                style={{
+                    fill: "#fff",
+                    stroke: "#1d1d1b",
+                    strokeMiterlimit: 10,
+                }}
+            />
+            <rect
+                x={386.43}
+                y={125.46}
+                width={136.47}
+                height={459.72}
+                rx={68.24}
+                ry={68.24}
+                style={{
+                    fill: "#fff",
+                    stroke: "#1d1d1b",
+                    strokeMiterlimit: 10,
+                }}
+            />
         </svg>
     );
 };
