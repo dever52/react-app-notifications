@@ -8,6 +8,11 @@ const Notification: FC<NotificationType> = (props) => {
     const [time, setTime] = useState(0);
     const [intervalID, setIntervalID] = useState(null);
 
+    const info = '#2f70fd';
+    const warning = '#e7d700';
+    const error = '#cb0000';
+    const success = '#00a40a';
+
     const startTimer = () => {
         const id = setInterval(() => {
             setTime(prev => {
@@ -50,19 +55,18 @@ const Notification: FC<NotificationType> = (props) => {
         startTimer();
     }, []);
 
-    let notificationType;
-    if (props.type == "success") notificationType = "notification-success";
-    if (props.type == "info") notificationType = "notification-info";
-    if (props.type == "error") notificationType = "notification-error";
-    if (props.type == "warning") notificationType = "notification-warning";
+    let color = info;
+    if (props.type == "success") color = success;
+    if (props.type == "error") color = error;
+    if (props.type == "warning") color = warning;
 
     return <div onMouseEnter={pauseTimer}
                 onMouseLeave={startTimer}
                 onClick={props.onClick}
-                style={{cursor: props.onClick != null ? 'pointer' : 'default'}}
-                className={`notification ${notificationType} notification__${props.type} ${exit ? 'notification__hide' : ''}`}>
+                style={{cursor: props.onClick != null ? 'pointer' : 'default', backgroundColor: color}}
+                className={`notification notification__${props.type} ${exit ? 'notification__hide' : ''}`}>
                 <span className={'notification__icon'}>
-                  <CircleExclamation/>
+                  <CircleExclamation color={color}/>
                 </span>
         <p className={'notification__msg'}>{props.message}</p>
     </div>;
