@@ -6,7 +6,7 @@ import {NotificationType} from './Notification.types';
 const Notification: FC<NotificationType> = (props) => {
     const [exit, setExit] = useState(false);
     const [time, setTime] = useState(0);
-    const [intervalID, setIntervalID] = useState(null);
+    const [intervalID, setIntervalID] = useState<NodeJS.Timer|null>(null);
 
     const info = '#2f70fd';
     const warning = '#e7d700';
@@ -23,7 +23,6 @@ const Notification: FC<NotificationType> = (props) => {
             });
         }, 1000);
 
-        // @ts-ignore
         setIntervalID(id);
     };
 

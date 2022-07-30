@@ -1,6 +1,6 @@
 {
-  "name": "react-app-notifications",
-  "version": "0.0.6",
+  "name": "@dever52/react-app-notifications",
+  "version": "0.0.1",
   "description": "React app notification library",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -11,6 +11,10 @@
     "README.md"
   ],
   "private": false,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": "https://github.com/dever52/react-app-notifications",
   "scripts": {
     "prebuild": "npx rimraf dist",
     "rollup-watch": "rollup -c -w",
